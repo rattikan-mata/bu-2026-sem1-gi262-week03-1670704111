@@ -1,12 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class OOPPlayer : MonoBehaviour
-{
-    public string Name;
-    public int positionX;
-    public int positionY;
-    public OOPMapGenerator mapGenerator;
+public class OOPPlayer : Character
+{ 
+    
 
     private InputAction moveAction;
 
@@ -20,6 +17,9 @@ public class OOPPlayer : MonoBehaviour
         Vector2 direction = moveAction.ReadValue<Vector2>();
 
         // call method Move(Vector2.up);
-        
+        if (moveAction.triggered)
+        {
+            Move(direction);
+        }
     }
 }
