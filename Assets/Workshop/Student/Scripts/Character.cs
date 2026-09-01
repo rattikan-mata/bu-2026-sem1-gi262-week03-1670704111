@@ -15,11 +15,18 @@ public class Character : Identity
 
     public void GetRemainEnergy()
     {
-        
+        Debug.Log($"{Name} : {energy}");
     }
 
     public virtual void Move(Vector2 direction)
     {
+        if (isFreeze == true)
+        {
+            GetComponent<SpriteRenderer>().color = Color.white;
+            isFreeze = false;
+            return;
+        }
+
         int toX = (int)(positionX + direction.x);
         int toY = (int)(positionY + direction.y);
 

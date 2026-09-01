@@ -47,7 +47,8 @@ namespace Assignment.StudentSolution.LCT03
             // + เรียกใช้ method Walk() ของ dog
             Dog dog = new Dog();
             dog.name = "Buddy";
-
+            dog.MakeSound();
+            dog.Walk();
 
             // 2. สร้าง instance ของ class Bird โดยกำหนดชื่อตัวแปรว่า bird
             // + กำหนดชื่อ (name) ว่า "Twitty"
